@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>රැකියා විස්තර වෙත යන්න</title>
+    <!-- Load Tailwind CSS for modern, attractive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font and soft gradient background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: linear-gradient(135deg, #f0f4f8 0%, #e0e7f0 100%);
+        }
+        /* Dynamic transition for smooth hover effects */
+        .dynamic-button-transition {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center p-4">
+
+    <!-- Main Card Container: Professional, rounded, and shadowed -->
+    <div class="container bg-white p-8 md:p-12 rounded-xl shadow-2xl max-w-lg w-full text-center border-t-4 border-teal-600">
+        
+        <!-- Heading -->
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4 tracking-tight">
+            රැකියා විස්තර වෙත යන්න!
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            දැන්වීම් මඟ හැර ඉක්මනින්ම **රැකියා විස්තර** වෙත පිවිසෙන්න. ඔබේ වටිනා කාලය ඉතිරි කරගන්න.
+        </p>
+        
+        <!-- The Dynamic Button Link -->
+        <a id="jobDetailsLink" 
+           href="##YOUR_JOB_DETAILS_LINK_HERE##" 
+           target="_blank"
+           class="skip-button dynamic-button-transition 
+                  inline-block w-full sm:w-auto 
+                  px-10 py-4 
+                  bg-teal-600 text-white font-bold 
+                  text-lg
+                  rounded-full shadow-lg 
+                  hover:bg-teal-700 hover:shadow-xl hover:scale-105 
+                  active:scale-95 
+                  focus:outline-none focus:ring-4 focus:ring-teal-300">
+            JOB DETAILS
+        </a>
+
+        <!-- Footer Note -->
+        <p class="mt-8 text-xs text-gray-400">
+            (මෙම බොත්තම ඔබව නව ටැබ් එකකින් රැකියා විස්තර වෙත ගෙන යනු ඇත.)
+        </p>
+    </div>
+
+    <!-- JavaScript for Dynamic Link Injection and Enhanced Interactivity -->
+    <script>
+        // උපදෙස්: 1. ඔබේ සැබෑ රැකියා විස්තර ලින්ක් එක මෙහි ඇතුල් කරන්න.
+        const jobDetailsURL = "https://ezmonline-money.blogspot.com/2025/09/youtube.html"; // <-- CHANGE THIS LINK
+        
+        // 2. HTML එකේ ඇති 'href' අගය යාවත්කාලීන කිරීම.
+        document.getElementById('jobDetailsLink').href = jobDetailsURL;
+
+        // 3. (විකල්ප) බොත්තම ක්ලික් කරන විට කුඩා ප්‍රමාණයේ කම්පනයක් (Haptic feedback) ලබා දීම
+        // මෙය ස්පර්ශ උපාංගවල (ජංගම දුරකථන වැනි) ක්ලික් කිරීමේ අත්දැකීම වැඩි දියුණු කරයි.
+        document.getElementById('jobDetailsLink').addEventListener('click', function() {
+            if (navigator.vibrate) {
+                navigator.vibrate(50); // 50ms කම්පනය
+            }
+        });
+    </script>
+
+</body>
+</html>
